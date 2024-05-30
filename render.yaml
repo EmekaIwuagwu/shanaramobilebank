@@ -1,13 +1,13 @@
 databases:
-  - name: shanaramobilebank
-    databaseName: shanarabank_db
-    user: shanaramobilebank
+  - name: mysite
+    databaseName: mysite
+    user: mysite
     plan: free
 
 services:
   - type: web
     plan: free
-    name: shanaramobilebank
+    name: mysite
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
