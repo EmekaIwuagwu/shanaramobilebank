@@ -4,7 +4,8 @@ set -o errexit
 
 
 bundle install
-chmod +x bin/rails
+sed -i '1s|.*|#!/usr/bin/env ruby|' bin/*
+chmod +x bin/*
 bundle exec rails db:migrate
 #bundle exec rails assets:precompile
 #bundle exec rails assets:clean
